@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Res</title>
+</head>
+<body>
+<form th:action="@{calc}" th:object="${calculator}" method="post">
+    <div class="form-group">
+        <label for="firstNumber"> First num :</label> <input type="text" class="form-control" id="firstNumber"
+                                                          placeholder="Enter first number"
+                                                          name="firstNumber" th:field="*{firstNumber}"/>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="secondNumber"> Second num :</label> <input type="text" class="form-control" id="secondNumber"
+                                                            placeholder="Enter second number"
+                                                            name="secondNumber" th:field="*{secondNumber}"/>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="expression"> Operation :</label> <input type="text" class="form-control" id="expression"
+                                                           placeholder="Enter operation"
+                                                           name="expression" th:field="*{expression}"/>
+    </div>
+    <br>
+    <div><input type="submit" value="Calculate"/></div>
+    </form>
+    <p th:text="${result}"></p>
+</body>
+</html>
