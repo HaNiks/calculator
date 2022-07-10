@@ -7,25 +7,30 @@
 <body>
 <form th:action="@{calc}" th:object="${calculator}" method="post">
     <div class="form-group">
-        <label for="firstNumber"> First num :</label> <input type="text" class="form-control" id="firstNumber"
-                                                          placeholder="Enter first number"
-                                                          name="firstNumber" th:field="*{firstNumber}"/>
+        <label> First num :
+            <input type="text"
+                   th:field="*{firstNumber}"/>
+        </label>
     </div>
     <br>
     <div class="form-group">
-        <label for="secondNumber"> Second num :</label> <input type="text" class="form-control" id="secondNumber"
-                                                            placeholder="Enter second number"
-                                                            name="secondNumber" th:field="*{secondNumber}"/>
+        <label> Second num :
+            <input type="text"
+                   th:field="*{secondNumber}"/>
+        </label>
     </div>
     <br>
     <div class="form-group">
-        <label for="expression"> Operation :</label> <input type="text" class="form-control" id="expression"
-                                                           placeholder="Enter operation"
-                                                           name="expression" th:field="*{expression}"/>
+        <label> Operation :
+            <input type="text"
+                   placeholder="Enter operation"
+                   th:field="*{expression}"/>
+        </label>
     </div>
     <br>
     <div><input type="submit" value="Calculate"/></div>
-    </form>
-    <p th:text="${result}"></p>
+</form>
+<br/>
+<p th:text="${result}"></p>
 </body>
 </html>
